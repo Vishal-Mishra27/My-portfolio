@@ -97,7 +97,7 @@ export default function Project() {
       </h1>
 
       {/* Project Cards Grid */}
-      <div className="bg-gray-100 mt-3">
+      {/* <div className="bg-gray-100 mt-3">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mt-0 grid grid-cols-1 gap-8 lg:grid-cols-3 text-center">
             {callouts.map((callout, index) => (
@@ -106,6 +106,35 @@ export default function Project() {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={cardVariants}
+                className="group relative p-4 bg-white rounded-lg shadow-md"
+              >
+                <div className="relative h-80 w-full overflow-hidden rounded-lg bg-gray-100">
+                  <img
+                    alt={callout.imageAlt}
+                    src={callout.imageSrc}
+                    className="h-full w-full object-cover object-center group-hover:opacity-75"
+                  />
+                </div>
+                <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                  <a href={callout.href}>{callout.name}</a>
+                </h3>
+                <p className="text-sm text-gray-600">{callout.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div> */}
+      <div className="bg-gray-100 mt-3">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-center">
+            {callouts.map((callout, index) => (
+              <motion.div
+                key={callout.name}
+                initial={{ opacity: 1, y: 50 }} // Start hidden
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 50 }
+                } // Animate when in view
+                transition={{ duration: 0.6 }}
                 className="group relative p-4 bg-white rounded-lg shadow-md"
               >
                 <div className="relative h-80 w-full overflow-hidden rounded-lg bg-gray-100">
