@@ -1,5 +1,9 @@
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { motion } from "framer-motion";
+import React from 'react'
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const links = [
   { name: "Open roles", href: "#" },
@@ -14,7 +18,24 @@ const stats = [
   { name: "From", value: "UP, India" },
 ];
 
+const textVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+const statsVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6 },
+  }),
+};
+
 export default function Aboutme() {
+
+   const ref = useRef(null);
+   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
   return (
     <div id="about">
       <Stack
@@ -69,7 +90,7 @@ export default function Aboutme() {
             className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
           />
         </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
               Hi, I'm Vishal Mishra
@@ -94,6 +115,51 @@ export default function Aboutme() {
                     {stat.name}
                   </dd>
                 </div>
+              ))}
+            </dl>
+          </div>
+        </div> */}
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Heading and Paragraph Animation */}
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={textVariants}
+            className="mx-auto max-w-2xl lg:mx-0"
+          >
+            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              Hi, I'm Vishal Mishra
+            </h2>
+            <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+              Vishal has a solid foundation in web development, having worked on
+              numerous projects that showcase his ability to create responsive
+              and efficient applications. His proficiency in React allows him to
+              build intuitive user interfaces, while his knowledge of Node.js
+              and Express.js enables him to develop robust server-side
+              applications. With MongoDB as his database of choice, Vishal is
+              adept at designing data models that support complex
+              functionalities.
+            </p>
+          </motion.div>
+
+          {/* Stats Section Animation */}
+          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={stat.name}
+                  initial="hidden"
+                  animate={isInView ? "visible" : "hidden"}
+                  custom={i}
+                  variants={statsVariants}
+                  className="flex flex-col-reverse gap-1"
+                >
+                  <dt className="text-base/7 text-gray-300">{stat.value}</dt>
+                  <dd className="text-4xl font-semibold tracking-tight text-white">
+                    {stat.name}
+                  </dd>
+                </motion.div>
               ))}
             </dl>
           </div>

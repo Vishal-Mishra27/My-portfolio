@@ -1,6 +1,19 @@
 import React from 'react'
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6 },
+  }),
+};
+
 const callouts = [
   {
     name: "HTML",
@@ -87,6 +100,8 @@ const callouts = [
   },
 ];
 export default function Whatido() {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { triggerOnce: true, threshold: 0.2 });
   return (
     <div className="bg-gray-100" id="skills">
       <Stack
@@ -114,8 +129,6 @@ export default function Whatido() {
       <div className="bg-gray-100 mt-3">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
           <div>
-            {/* <h2 className="text-2xl font-bold text-gray-900">Collections</h2> */}
-
             <div className="mt-0 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0 text-center">
               {callouts.map((callout) => (
                 <div key={callout.name} className="group relative">
@@ -127,7 +140,7 @@ export default function Whatido() {
                     />
                   </div>
                   <h3 className="mt-3 text-sm text-black-500">
-                    <p >
+                    <p>
                       <span className="absolute inset-0" />
                       {callout.name}
                     </p>
@@ -141,6 +154,7 @@ export default function Whatido() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
