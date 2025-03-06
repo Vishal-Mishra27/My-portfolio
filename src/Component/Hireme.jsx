@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 
 function Hireme() {
   return (
-    <Card className="bg-dark text-white mt-3">
+    <Card className="bg-dark text-[#ffc107] mt-3">
       <Card.Img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqAWGnEEfVTST3qa0QhX3eSZfSaqEBJoRuyA&s"
         alt="Card image"
@@ -19,7 +19,7 @@ function Hireme() {
         <Card.Text>
           {" "}
           <Button variant="primary" className="py-2 px-3">
-            <a href="#contact" className='text-decoration-none text-white'> Hire Me </a>
+            <a href="#contact" className='text-decoration-none text-[#ffc107]'> Hire Me </a>
           </Button>{" "}
         </Card.Text>
       </Card.ImgOverlay>

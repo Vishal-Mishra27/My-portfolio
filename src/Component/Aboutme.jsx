@@ -79,7 +79,7 @@ export default function AboutMe() {
             variants={textVariants}
             className="mx-auto max-w-2xl lg:mx-0"
           >
-            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            <h2 className="text-5xl font-semibold tracking-tight text-[#ffc107] sm:text-7xl">
               Hi, I'm Vishal Mishra
             </h2>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
@@ -107,7 +107,7 @@ export default function AboutMe() {
                   className="flex flex-col-reverse gap-1"
                 >
                   <dt className="text-base/7 text-gray-300">{stat.value}</dt>
-                  <dd className="text-4xl font-semibold tracking-tight text-white">
+                  <dd className="text-4xl font-semibold tracking-tight text-[#ffc107]">
                     {stat.name}
                   </dd>
                 </motion.div>

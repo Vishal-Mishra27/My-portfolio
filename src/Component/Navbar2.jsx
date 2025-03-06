@@ -28,7 +28,7 @@
 //               <Link to="projects" smooth={true} duration={500}>
 //                 <Button
 //                   variant="contained"
-//                   className="bg-blue-500 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-blue-600 transition duration-300"
+//                   className="bg-blue-500 text-[#ffc107] px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-blue-600 transition duration-300"
 //                 >
 //                   View my work
 //                 </Button>
@@ -148,7 +148,7 @@ export default function Navbar2() {
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-500 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-blue-600 transition duration-300"
+                  className="bg-blue-500 text-[#ffc107] px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-blue-600 transition duration-300"
                 >
                   View my work
                 </motion.button>

@@ -28,20 +28,20 @@ export default function Footer() {
         />
       </div>
       <div className="flex flex-col items-center justify-center flex-1">
-        <p className="text-sm text-white text-center">
+        <p className="text-sm text-[#ffc107] text-center">
           <strong className="font-semibold">
             Copyright © 2025 By My Team. All Rights Reserved.
           </strong>
           <svg
             viewBox="0 0 2 2"
             aria-hidden="true"
-            className="mx-2 inline h-0.5 w-0.5 fill-current text-white"
+            className="mx-2 inline h-0.5 w-0.5 fill-current text-[#ffc107]"
           >
             <circle r={1} cx={1} cy={1} />
           </svg>
           <a
             href="#"
-            className="inline-flex rounded-full bg-gray-800 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            className="inline-flex rounded-full bg-gray-800 px-3.5 py-1 text-sm font-semibold text-[#ffc107] shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
           >
             Designed by Vishal Mishra
           </a>

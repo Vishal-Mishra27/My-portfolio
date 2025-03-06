@@ -126,7 +126,7 @@ export default function Project() {
       </div> */}
       <div className="bg-gray-100 mt-3">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-center">
+          <div className="mt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-6 text-center">
             {callouts.map((callout, index) => (
               <motion.div
                 key={callout.name}

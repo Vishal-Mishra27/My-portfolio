@@ -11,7 +11,7 @@ function Navbar() {
         <div className="md:mr-4 flex justify-between w-full">
           <a
             href="#home"
-            className="text-red-700 hover:text-yellow-800 transition-all duration-300"
+            className="text-[#fff] hover:text-yellow-800 transition-all duration-300"
           >
             <h1 className="text-3xl font-bold hover:scale-105 transition-transform duration-300">
               Vishal Mishra
@@ -32,7 +32,7 @@ function Navbar() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-white text-decoration-none hover:text-yellow-400 hover:scale-105 transition-transform duration-300"
+                className="text-[#ffc107] text-decoration-none hover:text-yellow-400 hover:scale-105 transition-transform duration-300"
               >
                 {item}
               </a>
@@ -52,9 +52,9 @@ function Navbar() {
             transition={{ duration: 0.3 }}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-white" />
+              <X className="h-6 w-6 text-[#ffc107]" />
             ) : (
-              <Menu className="h-6 w-6 text-white" />
+              <Menu className="h-6 w-6 text-[#ffc107]" />
             )}
           </motion.div>
         </motion.button>
@@ -74,7 +74,7 @@ function Navbar() {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block py-2 px-3 rounded-md text-base font-medium text-white hover:text-yellow-400 transition-all duration-300 text-decoration-none"
+                className="block py-2 px-3 rounded-md text-base font-medium text-[#ffc107] hover:text-yellow-400 transition-all duration-300 text-decoration-none"
                 onClick={() => setMobileMenuOpen(false)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
