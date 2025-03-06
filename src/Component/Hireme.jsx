@@ -13,7 +13,7 @@ function Hireme() {
         style={{ maxHeight: "50vh" }}
       />
       <Card.ImgOverlay className="d-flex flex-column justify-content-center align-items-center">
-        <Card.Text style={{ fontWeight: "bold", fontSize: "34px" }}>
+        <Card.Text style={{ fontWeight: "bold", fontSize: "34px", color:"#ffc107" }}>
           Interested in working with me?
         </Card.Text>
         <Card.Text>
